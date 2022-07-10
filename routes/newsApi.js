@@ -7,7 +7,7 @@ router.get(
 	async (req, res) => {
 		try {
 			let actualDay = new Date();
-			let apiKey = "2c6bfa81c2e8403da6eff5d85b8d1432";
+			let apiKey = "pasteApiKeyHere";
 			actualDay.toISOString().split("T")[0];
 			console.log(actualDay);
 			let url = `http://newsapi.org/v2/everything?q=latest&from=${actualDay}&to=${actualDay}&sortBy=popularity&apiKey=${apiKey}`;
