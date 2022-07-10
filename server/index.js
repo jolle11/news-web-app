@@ -1,11 +1,13 @@
 const express = require("express");
+const cors = require("cors"); // For the "ERR_NETWORK"
 
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 
 const server = express();
 
-server.use("/", require("../routes/index"));
-server.use("/news", require("../routes/newsApi"));
+server.use(cors());
+
+server.use("/", require("../routes/newsApi"));
 
 server.listen(
 	PORT,
